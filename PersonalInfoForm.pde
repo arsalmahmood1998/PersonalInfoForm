@@ -1,4 +1,3 @@
-PVector location;
 void setup() {
   size(800, 700);
   background(255);
@@ -13,16 +12,14 @@ void setup() {
   text("Address:", 50, 450);
 }
 void draw() {
+}
+void mouseDragged() {
   noStroke();
   if (mouseButton==LEFT) {  
     fill(0, 0, 255 );
+    circle(mouseX, mouseY, 5);
   } else if (mouseButton==RIGHT) {
     fill(255);
+    circle(mouseX, mouseY, 5);
   }
-  if (location!=null) {
-    circle(location.x, location.y, 5);
-  }
-}
-void mouseDragged() {
-  location = new PVector(mouseX, mouseY);
 }
